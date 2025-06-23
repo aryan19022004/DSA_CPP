@@ -27,5 +27,9 @@ int main()
         cout<<arr[i]<<" ";
     }
 
+    /* 
+     Optimal solution   with Time complexity = O(n)    space complexity = O(1)
+    */
+
     return 0;
 }
