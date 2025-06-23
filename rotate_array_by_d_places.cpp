@@ -31,5 +31,15 @@ int main()
      Optimal solution   with Time complexity = O(n)    space complexity = O(1)
     */
 
+      int d = 3%7;
+    reverse(arr,arr+d);
+    reverse(arr+d,arr+7);
+    reverse(arr,arr+7);
+
+    for(int i =0;i<7;i++){
+        cout<<arr[i]<<" ";
+    }
+
+
     return 0;
 }
