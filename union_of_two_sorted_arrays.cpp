@@ -7,7 +7,7 @@ int main()
     vector<int>arr1 = {1,2,3,4,5,6,7};
     vector<int>arr2 = {3,4,5,8,9};
     int n1 = arr1.size();
-    int n2 = arr2.size();  // ✅
+    int n2 = arr2.size();  
 
     vector<int> union_array;
     int i = 0;
