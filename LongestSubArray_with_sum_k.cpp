@@ -50,3 +50,32 @@ int main()
     return 0;
 }
 */
+
+/*
+  ************************* Optimal Solution*******************
+ vector<int> arr = {1, 2, 3, 4, 5, 6, 7, 8};
+    int k = 10;  // <-- You forgot this
+    int n = arr.size();
+
+    int sum = arr[0];
+    int maxLen = 0;
+    int left = 0, right = 0;
+
+    while (right < n) {
+        while (left <= right && sum > k) {
+            sum -= arr[left];
+            left++;
+        }
+
+        if (sum == k) {
+            maxLen = max(maxLen, right - left + 1);
+        }
+
+        right++;
+        if (right < n)
+            sum += arr[right];
+    }
+
+    cout << "Length of Longest Subarray with sum " << k << " is: " << maxLen << endl;
+  
+*/
