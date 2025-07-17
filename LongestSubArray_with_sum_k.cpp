@@ -27,7 +27,7 @@ int main()
            }
           }
     */
-
+/*   Better solution       ********************* It is optimal when elements are only positive and negatives   and better in case of Positive And Zeros
     int k = 10;
     int sum = 0;
     int maxLen = 0;
@@ -49,4 +49,4 @@ int main()
     cout<<"Max length is "<<maxLen;
     return 0;
 }
-
+*/
