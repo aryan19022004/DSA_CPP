@@ -27,6 +27,25 @@ int main()
            }
           }
     */
+
+    int k = 10;
+    int sum = 0;
+    int maxLen = 0;
+    map<int,int>preSumMap;
+    for(int i =0;i<n;i++){
+      sum+=arr[i];
+      if(sum == k){
+        maxLen = max(maxLen,i+1);
+      }
+      int rem = sum -k;
+      if(preSumMap.find(rem)!= preSumMap.end()){
+        int len = i - preSumMap[rem];
+        maxLen = max(maxLen,len);
+      }
+
+     preSumMap[sum] = i;
+    }
+    cout<<"Max length is "<<maxLen;
     return 0;
 }
 
