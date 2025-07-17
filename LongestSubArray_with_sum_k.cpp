@@ -43,7 +43,8 @@ int main()
         maxLen = max(maxLen,len);
       }
 
-     preSumMap[sum] = i;
+     if(preSumMap.find(sum) == preSumMap.end())
+        {preSumMap[sum] = i;}
     }
     cout<<"Max length is "<<maxLen;
     return 0;
