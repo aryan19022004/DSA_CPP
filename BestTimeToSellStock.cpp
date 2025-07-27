@@ -7,12 +7,12 @@ int main() {
     vector<int> arr = {1, 2, 3, 4, 5, 6, 1, 1, 1, 3};
     int n = arr.size();
 
-    int minPrice = INT_MAX;   // Track min price so far
+    int minPrice = INT_MAX;
     int maxProfit = 0;
 
-    int buyDay = -1;   // Final answer
+    int buyDay = -1;   
     int sellDay = -1;
-    int tempBuyDay = 0;  // Possible buy day
+    int tempBuyDay = 0;  
 
     for(int i = 0; i < n; i++){
         if(arr[i] < minPrice){
