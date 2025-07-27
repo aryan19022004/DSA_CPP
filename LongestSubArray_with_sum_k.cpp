@@ -77,5 +77,54 @@ int main()
     }
 
     cout << "Length of Longest Subarray with sum " << k << " is: " << maxLen << endl;
+
+
+    ************************************************OR***********************
+
+    #include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    vector<int> arr = {1, 2, 3, 4, 5, 6, 1, 1, 1, 3};
+    int target = 9;
+    int sum = 0;
+    int left = 0;
+
+    int maxLen = 0;
+    int startIndex = -1;
+    int endIndex = -1;
+
+    for (int right = 0; right < arr.size(); right++) {
+        sum += arr[right];
+
+        // Shrink window from left if sum > target
+        while (sum > target && left <= right) {
+            sum -= arr[left];
+            left++;
+        }
+
+        // If sum == target, check for max length
+        if (sum == target) {
+            int currLen = right - left + 1;
+            if (currLen > maxLen) {
+                maxLen = currLen;
+                startIndex = left;
+                endIndex = right;
+            }
+        }
+    }
+
+    if (maxLen > 0) {
+        cout << "Longest subarray with sum " << target << " is: [ ";
+        for (int i = startIndex; i <= endIndex; i++) {
+            cout << arr[i] << " ";
+        }
+        cout << "]\nLength: " << maxLen << endl;
+    } else {
+        cout << "No subarray found\n";
+    }
+
+    return 0;
   
 */
