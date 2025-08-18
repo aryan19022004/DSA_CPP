@@ -17,3 +17,9 @@ int main()
     return 0;
 }
 
+)
+
+-- Conclusion:
+     1. unordered_set → O(n) time, O(n) space
+     2. Sort + in-place → O(n log n) time, O(1) space
+
