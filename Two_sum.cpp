@@ -60,6 +60,39 @@ int main()
     return 0;
     }
 
+
+
+    #include <iostream>
+#include <bits/stdc++.h>
+using namespace std;
+
+int main() {
+    vector<int> arr = {1,2,3,4,5,6,7};
+    int n = arr.size();
+    vector<vector<int>> result;
+    unordered_map<int,int> mp;
+    int k = 9;
+
+    for(int i = 0; i < n; i++) {
+        int a = arr[i];
+        int rem = k - a;
+
+        if(mp.find(rem) != mp.end()) {
+            result.push_back({i, a, mp[rem], rem});
+        }
+        mp[a] = i;
+    }
+
+    for(auto &p : result) {
+        cout << "Numbers whose sum is : " << k
+             << " are at index " << p[0] << " ( value :" << p[1] << " )"
+             << " and " << p[2] << " ( value :" << p[3] << " )" << endl;
+    }
+
+    return 0;
+}
+
+
     */
     return 0;
 }
